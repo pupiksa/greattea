@@ -1,0 +1,27 @@
+/blockchain-project
+  /src
+    - main.py
+    - blockchain.py
+    - transaction.py
+  - README.md
+# main.py
+from blockchain import Blockchain
+from transaction import Transaction
+
+# Create a blockchain
+my_blockchain = Blockchain()
+
+# Create transactions
+transaction1 = Transaction("sender1", "recipient1", 1.5)
+transaction2 = Transaction("sender2", "recipient2", 3.0)
+
+# Add transactions to the blockchain
+my_blockchain.add_transaction(transaction1)
+my_blockchain.add_transaction(transaction2)
+
+# Mine a block
+my_blockchain.mine_block()
+
+# Display the blockchain
+print("Blockchain:")
+print(my_blockchain.get_chain())
